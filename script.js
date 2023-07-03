@@ -8,7 +8,7 @@ for (let i = 0; i < 16; i++) {
     display: flex;`);
     for (let k = 0; k < 16; k++) {
         const square = document.createElement(`div`);
-        square.classList.add(`${(k + 1)*(i + 1) - 1}`);
+        square.classList.add(`s${(k + 1) + (16*(i + 1))}`);
         square.setAttribute(`style`,
         `border: 1px solid black;
         flex: auto;`);
@@ -20,3 +20,15 @@ for (let i = 0; i < 16; i++) {
     }
     container.appendChild(row);
 }
+
+document.addEventListener(`mouseover`, function(e) {
+    e.stopPropagation();
+    let length = e.target.classList.value.length;
+    let classValue = e.target.classList.value.slice(1, length + 1);
+    if (16 < classValue) {
+        let colorSquare = document.querySelector(`.s${classValue}`);
+        colorSquare.classList.add(`colorFill`);
+    }
+    return;
+}, 
+{capture: false});
