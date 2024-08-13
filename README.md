@@ -1,4 +1,8 @@
 # Etch-a-Sketch
-This project is a test of previous javascript skills I have learnt, namely DOM manipulation. Hopefully it goes well.
+Brief etch-a-sketch game using javascript.
 
-EDIT: I am very happy with the end product. Unlike with the rock, paper, scissors project, I actually knew what I was doing, I improved, and I knew what more I could do to this project to make it even better.
+## Run locally on machine
+- Git clone this repo
+- Open on code editor and run the html file live.
+
+
